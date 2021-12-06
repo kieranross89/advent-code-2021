@@ -1,11 +1,11 @@
-// in src/extensions/imdb-extension.ts
 import { GluegunToolbox } from 'gluegun'
+import { calculateDay1 } from '../advent/solutions/calculateDay1'
 
 module.exports = (toolbox: GluegunToolbox, day: string) => {
   // grab the prompt tool from our toolbox
   const { prompt, print } = toolbox
 
-  async function getChallengePart(name: string): Promise<Number> {
+  async function getChallengePart(): Promise<Number> {
     const result = await prompt.ask({
       type: 'input',
       name: 'challengePart',
@@ -20,5 +20,5 @@ module.exports = (toolbox: GluegunToolbox, day: string) => {
   }
 
   // attach our tools to the toolbox
-  toolbox.advent = { getChallengePart }
+  toolbox.advent = { getChallengePart , calculateDay1}
 }
