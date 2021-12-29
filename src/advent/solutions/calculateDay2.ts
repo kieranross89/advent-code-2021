@@ -1,4 +1,4 @@
-import { print } from 'gluegun/print';
+    import { print } from 'gluegun/print';
 
 const calculateDay2 = (inputData: string[], part: number) => {
     
@@ -7,7 +7,7 @@ const calculateDay2 = (inputData: string[], part: number) => {
             const test = movement.split(' ');
             const direction = test[0];
             const value = parseInt(test[1])
-
+            //TODO make better
             if(direction === 'forward'){
                 accumulator.horizontal += value;
             }
