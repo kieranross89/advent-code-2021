@@ -1,5 +1,6 @@
 import { GluegunToolbox } from 'gluegun'
 import { calculateDay1 } from '../advent/solutions/calculateDay1'
+import { calculateDay2 } from '../advent/solutions/calculateDay2'
 
 module.exports = (toolbox: GluegunToolbox, day: string) => {
   // grab the prompt tool from our toolbox
@@ -20,5 +21,5 @@ module.exports = (toolbox: GluegunToolbox, day: string) => {
   }
 
   // attach our tools to the toolbox
-  toolbox.advent = { getChallengePart , calculateDay1}
+  toolbox.advent = { getChallengePart , calculateDay1, calculateDay2}
 }
